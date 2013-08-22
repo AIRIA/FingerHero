@@ -34,7 +34,13 @@ void BaseSprite::setTouchMoved(std::function<void(Ref *pSender)> callback)
     this->moveHandler = callback;
 }
 
-
+bool BaseSprite::isContainPoint(cocos2d::Touch *touch)
+{
+    auto locationNode = convertToNodeSpace(touch->getLocation());
+    auto size = getContentSize();
+    auto rect = Rect(0, 0, size.width, size.height);
+    return rect.containsPoint(locationNode);
+}
 
 
 void BaseSprite::addEventListener()
@@ -44,12 +50,9 @@ void BaseSprite::addEventListener()
     eventListener->onTouchBegan = [](Touch *touch,Event *event)->bool
     {
         auto target = static_cast<BaseSprite*>(event->getCurrentTarget());
-        auto locationNode = target->convertToNodeSpace(touch->getLocation());
-        auto size = target->getContentSize();
-        auto rect = Rect(0, 0, size.width, size.height);
-        if (rect.containsPoint(locationNode))
+       
+        if(target->isContainPoint(touch))
         {
-            
             if (target->beganHandler)
             {
                 target->beganHandler(target);
@@ -57,6 +60,7 @@ void BaseSprite::addEventListener()
             return true;
         }
         return false;
+        
     };
     
     eventListener->onTouchMoved = [](Touch *touch,Event *event)->void
@@ -71,9 +75,13 @@ void BaseSprite::addEventListener()
     eventListener->onTouchEnded = [](Touch *touch,Event *event)->void
     {
         auto target = static_cast<BaseSprite*>(event->getCurrentTarget());
-        if(target->touchHandler)
+        target->setColor(Color3B::WHITE);
+        if(target->isContainPoint(touch))
         {
-            target->touchHandler(target);
+            if(target->touchHandler)
+            {
+                target->touchHandler(target);
+            }
         }
         
     };

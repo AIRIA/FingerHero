@@ -72,7 +72,6 @@ void GameModeIcon::onEnter()
         auto userData = &m_eType;
         event.setUserData(userData);
         this->getEventDispatcher()->dispatchEvent(&event);
-        Director::getInstance()->getRunningScene()->addChild(ExitConfirm::create());
     });
     auto label = Label::createWithSystemFont(m_sName, GAME_FONT, 40);
     label->setPositionY(5);

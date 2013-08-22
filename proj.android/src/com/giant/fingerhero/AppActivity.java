@@ -28,15 +28,26 @@ package com.giant.fingerhero;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import android.os.Bundle;
 import android.view.KeyEvent;
 
 import com.giant.jni.JniBrige;
+import com.giant.jni.PluginWrapper;
 
 public class AppActivity extends Cocos2dxActivity {
 	
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		PluginWrapper.init(this);
+	}
+
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
-		runOnUiThread(new Runnable() {
+		
+		PluginWrapper.runOnGLThread(new Runnable() {
 			
 			@Override
 			public void run() {

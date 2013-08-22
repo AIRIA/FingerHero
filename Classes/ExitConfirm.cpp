@@ -42,7 +42,7 @@ void ExitConfirm::initBgLayer()
     getEventDispatcher()->addEventListenerWithSceneGraphPriority(event, colorLayer);
 }
 
-void ExitConfirm::hideExitWindow()
+void ExitConfirm::hideExitWindow(float delay)
 {
     log("%s","hide exit window");
     auto fadeOut = FadeOut::create(ALERT_TIME);
@@ -81,7 +81,7 @@ void ExitConfirm::onEnter()
     
     right->setTag(kTagRightNode);
     right->setTouchHandler([&](Ref *pSender)->void{
-        this->hideExitWindow();
+        isShowExit = false;
     });
     
     left->setTouchHandler([](Ref *pSender)->void{
@@ -127,6 +127,7 @@ void ExitConfirm::onEnter()
     
     getEventDispatcher()->addCustomEventListener(EVENT_HIDE_EXIT, [this](EventCustom *customEvent)->void{
         this->hideExitWindow();
+        getEventDispatcher()->removeCustomEventListeners(EVENT_HIDE_EXIT);
     });
     
 }
@@ -141,13 +142,6 @@ void ExitConfirm::runFadeAction(cocos2d::Node *node,float duration,float alpha)
         runFadeAction(node, duration, alpha);
     }
 }
-
-
-
-
-
-
-
 
 
 

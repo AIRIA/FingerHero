@@ -24,15 +24,13 @@ public:
 
 };
 
-
 #if(CC_TARGET_PLATFORM==CC_PLATFORM_ANDROID)
 
 	extern "C" {
 
 		JNIEXPORT void JNICALL Java_com_giant_jni_JniBrige_showExit(JNIEnv *env,jobject thiz)
 		{
-			EventCustom event(EVENT_SHOW_EXIT);
-			Director::getInstance()->getEventDispatcher()->dispatchEvent(&event);
+            isShowExit = !isShowExit;
 		}
 	}
 #endif

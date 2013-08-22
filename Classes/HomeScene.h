@@ -22,6 +22,9 @@ private:
     void showLoginIcon();
     void showGameMode();
     void showCopyright();
+    void showExitConfirm();
+    void checkExitFlag(float delta);
 };
+
 
 #endif /* defined(__FingerHero__HomeScene__) */

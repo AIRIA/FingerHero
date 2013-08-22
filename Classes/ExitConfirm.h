@@ -21,7 +21,7 @@ public:
     CREATE_FUNC(ExitConfirm);
 protected:
     void runFadeAction(Node *node,float duration,float alpha);
-    void hideExitWindow();
+    void hideExitWindow(float delay=0.1f);
 };
 
 #endif /* defined(__FingerHero__ExitConfirm__) */
