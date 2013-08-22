@@ -23,6 +23,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		4105E03419A6013B0048A10C /* ShareVars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4105E03219A6013B0048A10C /* ShareVars.cpp */; };
 		4105E03519A6013B0048A10C /* ShareVars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4105E03219A6013B0048A10C /* ShareVars.cpp */; };
+		4105E03A19A739BB0048A10C /* ClassicScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4105E03819A739BB0048A10C /* ClassicScene.cpp */; };
+		4105E03B19A739BB0048A10C /* ClassicScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4105E03819A739BB0048A10C /* ClassicScene.cpp */; };
 		414E6E3419A43DCA0027A55F /* BaseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3319A43DCA0027A55F /* BaseSprite.cpp */; };
 		414E6E3519A43DCA0027A55F /* BaseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3319A43DCA0027A55F /* BaseSprite.cpp */; };
 		414E6E3A19A440B80027A55F /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3819A440B80027A55F /* VisibleRect.cpp */; };
@@ -237,6 +239,8 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4105E03219A6013B0048A10C /* ShareVars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShareVars.cpp; path = ../Classes/ShareVars.cpp; sourceTree = "<group>"; };
 		4105E03319A6013B0048A10C /* ShareVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareVars.h; path = ../Classes/ShareVars.h; sourceTree = "<group>"; };
+		4105E03819A739BB0048A10C /* ClassicScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClassicScene.cpp; path = ../Classes/ClassicScene.cpp; sourceTree = "<group>"; };
+		4105E03919A739BB0048A10C /* ClassicScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassicScene.h; path = ../Classes/ClassicScene.h; sourceTree = "<group>"; };
 		414E6E3219A43DCA0027A55F /* BaseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSprite.h; path = ../Classes/BaseSprite.h; sourceTree = "<group>"; };
 		414E6E3319A43DCA0027A55F /* BaseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseSprite.cpp; path = ../Classes/BaseSprite.cpp; sourceTree = "<group>"; };
 		414E6E3819A440B80027A55F /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VisibleRect.cpp; path = ../Classes/VisibleRect.cpp; sourceTree = "<group>"; };
@@ -484,6 +488,8 @@
 			children = (
 				41A4EA8919A3604E0000B560 /* HomeScene.cpp */,
 				41A4EA8A19A3604E0000B560 /* HomeScene.h */,
+				4105E03819A739BB0048A10C /* ClassicScene.cpp */,
+				4105E03919A739BB0048A10C /* ClassicScene.h */,
 			);
 			name = scenes;
 			sourceTree = "<group>";
@@ -754,6 +760,7 @@
 				414E6E3A19A440B80027A55F /* VisibleRect.cpp in Sources */,
 				414E6E4619A5E7B30027A55F /* Util.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				4105E03A19A739BB0048A10C /* ClassicScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				414E6E4219A4A3ED0027A55F /* ExitConfirm.cpp in Sources */,
 				41A4EA7F19A35A370000B560 /* BaseLayer.cpp in Sources */,
@@ -769,6 +776,7 @@
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				4105E03519A6013B0048A10C /* ShareVars.cpp in Sources */,
 				414E6E3519A43DCA0027A55F /* BaseSprite.cpp in Sources */,
+				4105E03B19A739BB0048A10C /* ClassicScene.cpp in Sources */,
 				414E6E3B19A440B80027A55F /* VisibleRect.cpp in Sources */,
 				41A4EA8C19A3604E0000B560 /* HomeScene.cpp in Sources */,
 				41A4EA8019A35A370000B560 /* BaseLayer.cpp in Sources */,

@@ -24,6 +24,8 @@ protected:
     std::function<void(Ref *pSender)> touchHandler = nullptr;
     std::function<void(Ref *pSender)> moveHandler = nullptr;
     std::function<void(Ref *pSender)> beganHandler = nullptr;
+    
+    bool isContainPoint(Touch *touch);
 };
 
 #endif /* defined(__CatchPanda__BaseSprite__) */

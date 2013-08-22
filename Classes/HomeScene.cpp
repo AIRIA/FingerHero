@@ -13,6 +13,10 @@
 
 #define ACTION_TIME 0.3f
 
+enum Tag{
+    kTagExitConfirm
+};
+
 bool HomeScene::init()
 {
     if(!BaseLayer::init())
@@ -32,19 +36,32 @@ void HomeScene::onEnter()
     showCopyright();
     showTitleLine();
     showGameMode();
-    getEventDispatcher()->addCustomEventListener(EVENT_SHOW_EXIT, [](EventCustom *eventCustom)->void{
-        if (isShowExit==false)
-        {
-            Director::getInstance()->getRunningScene()->addChild(ExitConfirm::create());
-            isShowExit = true;
-        }
-        else
-        {
-            isShowExit = false;
-            Director::getInstance()->getEventDispatcher()->dispatchEvent(new EventCustom(EVENT_HIDE_EXIT));
-        }
+    schedule(schedule_selector(HomeScene::checkExitFlag));
+    getEventDispatcher()->addCustomEventListener(EVENT_SHOW_EXIT, [&](EventCustom *eventCustom)->void{
+        this->showExitConfirm();
     });
-    
+}
+
+void HomeScene::showExitConfirm()
+{
+    if (getChildByTag(kTagExitConfirm)) {
+        return;
+    }
+    auto exit = ExitConfirm::create();
+    exit->setTag(kTagExitConfirm);
+    addChild(exit);
+}
+
+void HomeScene::checkExitFlag(float delta)
+{
+    if (isShowExit==false)
+    {
+        Director::getInstance()->getEventDispatcher()->dispatchEvent(new EventCustom(EVENT_HIDE_EXIT));
+    }
+    else
+    {
+        Director::getInstance()->getEventDispatcher()->dispatchEvent(new EventCustom(EVENT_SHOW_EXIT));
+    }
 }
 
 void HomeScene::showTitleLine()
