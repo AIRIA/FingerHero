@@ -19,10 +19,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview->setFrameSize(480, 800);
         director->setOpenGLView(glview);
     }
-
+    
     director->setDisplayStats(true);
     director->setAnimationInterval(1.0 / 60);
-
+    srand(time(nullptr));
     HomeScene::create()->run();
     return true;
 }
