@@ -21,6 +21,14 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		414E6E3419A43DCA0027A55F /* BaseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3319A43DCA0027A55F /* BaseSprite.cpp */; };
+		414E6E3519A43DCA0027A55F /* BaseSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3319A43DCA0027A55F /* BaseSprite.cpp */; };
+		414E6E3A19A440B80027A55F /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3819A440B80027A55F /* VisibleRect.cpp */; };
+		414E6E3B19A440B80027A55F /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3819A440B80027A55F /* VisibleRect.cpp */; };
+		414E6E3E19A44A610027A55F /* GameModeIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3C19A44A610027A55F /* GameModeIcon.cpp */; };
+		414E6E3F19A44A610027A55F /* GameModeIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E3C19A44A610027A55F /* GameModeIcon.cpp */; };
+		414E6E4219A4A3ED0027A55F /* ExitConfirm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E4019A4A3ED0027A55F /* ExitConfirm.cpp */; };
+		414E6E4319A4A3ED0027A55F /* ExitConfirm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 414E6E4019A4A3ED0027A55F /* ExitConfirm.cpp */; };
 		41A4EA7F19A35A370000B560 /* BaseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41A4EA7D19A35A370000B560 /* BaseLayer.cpp */; };
 		41A4EA8019A35A370000B560 /* BaseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41A4EA7D19A35A370000B560 /* BaseLayer.cpp */; };
 		41A4EA8419A360120000B560 /* texture.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 41A4EA8219A360120000B560 /* texture.pvr.ccz */; };
@@ -223,6 +231,14 @@
 		1D6058910D05DD3D006BFB54 /* FingerHero iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FingerHero iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		414E6E3219A43DCA0027A55F /* BaseSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseSprite.h; path = ../Classes/BaseSprite.h; sourceTree = "<group>"; };
+		414E6E3319A43DCA0027A55F /* BaseSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseSprite.cpp; path = ../Classes/BaseSprite.cpp; sourceTree = "<group>"; };
+		414E6E3819A440B80027A55F /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VisibleRect.cpp; path = ../Classes/VisibleRect.cpp; sourceTree = "<group>"; };
+		414E6E3919A440B80027A55F /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VisibleRect.h; path = ../Classes/VisibleRect.h; sourceTree = "<group>"; };
+		414E6E3C19A44A610027A55F /* GameModeIcon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameModeIcon.cpp; path = ../Classes/GameModeIcon.cpp; sourceTree = "<group>"; };
+		414E6E3D19A44A610027A55F /* GameModeIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameModeIcon.h; path = ../Classes/GameModeIcon.h; sourceTree = "<group>"; };
+		414E6E4019A4A3ED0027A55F /* ExitConfirm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExitConfirm.cpp; path = ../Classes/ExitConfirm.cpp; sourceTree = "<group>"; };
+		414E6E4119A4A3ED0027A55F /* ExitConfirm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExitConfirm.h; path = ../Classes/ExitConfirm.h; sourceTree = "<group>"; };
 		41A4EA7D19A35A370000B560 /* BaseLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseLayer.cpp; path = ../Classes/BaseLayer.cpp; sourceTree = "<group>"; };
 		41A4EA7E19A35A370000B560 /* BaseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseLayer.h; path = ../Classes/BaseLayer.h; sourceTree = "<group>"; };
 		41A4EA8119A35A4D0000B560 /* CommonHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonHeaders.h; path = ../Classes/CommonHeaders.h; sourceTree = "<group>"; };
@@ -414,6 +430,10 @@
 		41A4EA7819A359E30000B560 /* base */ = {
 			isa = PBXGroup;
 			children = (
+				414E6E3819A440B80027A55F /* VisibleRect.cpp */,
+				414E6E3919A440B80027A55F /* VisibleRect.h */,
+				414E6E3219A43DCA0027A55F /* BaseSprite.h */,
+				414E6E3319A43DCA0027A55F /* BaseSprite.cpp */,
 				41A4EA7D19A35A370000B560 /* BaseLayer.cpp */,
 				41A4EA7E19A35A370000B560 /* BaseLayer.h */,
 			);
@@ -431,6 +451,10 @@
 		41A4EA7C19A35A0B0000B560 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				414E6E3C19A44A610027A55F /* GameModeIcon.cpp */,
+				414E6E3D19A44A610027A55F /* GameModeIcon.h */,
+				414E6E4019A4A3ED0027A55F /* ExitConfirm.cpp */,
+				414E6E4119A4A3ED0027A55F /* ExitConfirm.h */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -704,8 +728,12 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				41A4EA8B19A3604E0000B560 /* HomeScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				414E6E3419A43DCA0027A55F /* BaseSprite.cpp in Sources */,
+				414E6E3E19A44A610027A55F /* GameModeIcon.cpp in Sources */,
+				414E6E3A19A440B80027A55F /* VisibleRect.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				414E6E4219A4A3ED0027A55F /* ExitConfirm.cpp in Sources */,
 				41A4EA7F19A35A370000B560 /* BaseLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,9 +742,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414E6E4319A4A3ED0027A55F /* ExitConfirm.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				414E6E3519A43DCA0027A55F /* BaseSprite.cpp in Sources */,
+				414E6E3B19A440B80027A55F /* VisibleRect.cpp in Sources */,
 				41A4EA8C19A3604E0000B560 /* HomeScene.cpp in Sources */,
 				41A4EA8019A35A370000B560 /* BaseLayer.cpp in Sources */,
+				414E6E3F19A44A610027A55F /* GameModeIcon.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

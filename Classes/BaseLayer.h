@@ -15,12 +15,18 @@ class BaseLayer:public Layer
 {
 public:
     virtual bool init();
-    CREATE_FUNC(BaseLayer);
     virtual void run();
+    virtual void onEnter();
+    CREATE_FUNC(BaseLayer);
+
 protected:
     SpriteFrameCache *m_pSpriteFrameCache;
+    Layer *m_pBody,*m_pHeader,*m_pFooter;
+    
     Size m_WinSize;
     float m_fScaleFactor;
+    
+    Layer *__createScaleLayer(const Point &anchorPoint,const Point &position);
 };
 
 #endif /* defined(__FingerHero__BaseLayer__) */

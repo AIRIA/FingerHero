@@ -8,18 +8,25 @@
 
 #include "BaseLayer.h"
 
+void BaseLayer::onEnter()
+{
+    Layer::onEnter();
+    m_pBody = __createScaleLayer(Point::ANCHOR_MIDDLE, VisibleRect::center());
+    m_pHeader = __createScaleLayer(Point::ANCHOR_MIDDLE_TOP, VisibleRect::top());
+    m_pFooter = __createScaleLayer(Point::ANCHOR_MIDDLE_BOTTOM, VisibleRect::bottom());
+}
+
 bool BaseLayer::init()
 {
     if(!Layer::init())
     {
         return false;
     }
-    m_WinSize = Director::getInstance()->getWinSize();
     
-    auto m_fScaleWidth = m_WinSize.width/DESIGN_WIDTH;
-    auto m_fScaleHeight = m_WinSize.height/DESIGN_HEIGHT;
-    m_fScaleFactor = m_fScaleWidth>m_fScaleHeight?m_fScaleWidth:m_fScaleHeight;
+    m_WinSize = Director::getInstance()->getWinSize();
+    m_fScaleFactor = m_WinSize.width/DESIGN_WIDTH;
     m_pSpriteFrameCache = SpriteFrameCache::getInstance();
+    
     return true;
 }
 
@@ -36,4 +43,16 @@ void BaseLayer::run()
     {
         Director::getInstance()->replaceScene(scene);
     }
+}
+
+auto BaseLayer::__createScaleLayer(const cocos2d::Point &anchorPoint, const cocos2d::Point &position) -> Layer*
+{
+    auto layer = Layer::create();
+    layer->setContentSize(Size(DESIGN_WIDTH,DESIGN_HEIGHT));
+    layer->setScale(m_fScaleFactor);
+    layer->ignoreAnchorPointForPosition(false);
+    layer->setAnchorPoint(anchorPoint);
+    layer->setPosition(position);
+    this->addChild(layer);
+    return layer;
 }
