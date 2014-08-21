@@ -9,6 +9,7 @@
 #include "HomeScene.h"
 #include "BaseSprite.h"
 #include "GameModeIcon.h"
+#include "ExitConfirm.h"
 
 #define ACTION_TIME 0.3f
 
@@ -31,6 +32,19 @@ void HomeScene::onEnter()
     showCopyright();
     showTitleLine();
     showGameMode();
+    getEventDispatcher()->addCustomEventListener(EVENT_SHOW_EXIT, [](EventCustom *eventCustom)->void{
+        if (isShowExit==false)
+        {
+            Director::getInstance()->getRunningScene()->addChild(ExitConfirm::create());
+            isShowExit = true;
+        }
+        else
+        {
+            isShowExit = false;
+            Director::getInstance()->getEventDispatcher()->dispatchEvent(new EventCustom(EVENT_HIDE_EXIT));
+        }
+    });
+    
 }
 
 void HomeScene::showTitleLine()
