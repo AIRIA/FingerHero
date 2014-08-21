@@ -74,7 +74,7 @@ void GameModeIcon::onEnter()
         this->getEventDispatcher()->dispatchEvent(&event);
         Director::getInstance()->getRunningScene()->addChild(ExitConfirm::create());
     });
-    auto label = Label::createWithSystemFont(m_sName, "微软雅黑", 40);
+    auto label = Label::createWithSystemFont(m_sName, GAME_FONT, 40);
     label->setPositionY(5);
     addChild(label);
 }

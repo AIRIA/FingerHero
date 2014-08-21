@@ -55,7 +55,7 @@ void HomeScene::showTitleLine()
         rightLine->runAction(MoveBy::create(ACTION_TIME, Point(-300,0)));
         wrapper->addChild(leftLine);
         wrapper->addChild(rightLine);
-        auto titleLabel = Label::createWithSystemFont(title, "微软雅黑", 40);
+        auto titleLabel = Label::createWithSystemFont(title, GAME_FONT, 40);
         titleLabel->setColor(Color3B::BLACK);
         titleLabel->setPosition(Point(DESIGN_WIDTH/2,0));
         wrapper->addChild(titleLabel);
@@ -118,7 +118,7 @@ void HomeScene::showGameMode()
 
 void HomeScene::showCopyright()
 {
-    auto label = Label::createWithSystemFont("2014-1015 完美计划版权所有", "黑体", 18);
+    auto label = Label::createWithSystemFont("2014-1015 完美计划版权所有", GAME_FONT, 18);
     label->setColor(Color3B::BLACK);
     label->setPosition(Point(DESIGN_WIDTH/2,20));
     m_pFooter->addChild(label);

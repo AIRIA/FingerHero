@@ -7,7 +7,7 @@
             <key>circle.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{434,2},{141,141}}</string>
+                <string>{{1072,2},{141,141}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>line.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,240},{170,5}}</string>
+                <string>{{536,92},{170,5}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>login_tencent.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{577,2},{100,100}}</string>
+                <string>{{912,92},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>login_wechat.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{538,145},{100,100}}</string>
+                <string>{{810,92},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>login_weibo.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{436,145},{100,100}}</string>
+                <string>{{708,92},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,41 +72,41 @@
             <key>pop_header.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{430,156}}</string>
+                <string>{{2,2},{532,194}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{430,156}}</string>
+                <string>{{0,0},{532,194}}</string>
                 <key>sourceSize</key>
-                <string>{430,156}</string>
+                <string>{532,194}</string>
             </dict>
             <key>pop_left.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{222,160},{212,78}}</string>
+                <string>{{804,2},{266,88}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{212,78}}</string>
+                <string>{{0,0},{266,88}}</string>
                 <key>sourceSize</key>
-                <string>{212,78}</string>
+                <string>{266,88}</string>
             </dict>
             <key>pop_right.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,160},{218,78}}</string>
+                <string>{{536,2},{266,88}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{218,78}}</string>
+                <string>{{0,0},{266,88}}</string>
                 <key>sourceSize</key>
-                <string>{218,78}</string>
+                <string>{266,88}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -116,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>texture.pvr.ccz</string>
             <key>size</key>
-            <string>{712,247}</string>
+            <string>{1215,198}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b0f16f14600c0dc6ba4c0af82b4d143d:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:dea0c83a3b041237a9c5739d0748e374:1/1$</string>
             <key>textureFileName</key>
             <string>texture.pvr.ccz</string>
         </dict>

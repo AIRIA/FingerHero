@@ -18,7 +18,7 @@ using namespace cocos2d;
 #define DESIGN_HEIGHT 960
 
 #define EVENT_SELECT_GAME_MODE "select_game_mode"//选择完游戏模式后派发
-#define GAME_FONT              "微软雅黑"
+#define GAME_FONT              "Droid Sans Fallback"
 
 enum ModeIconType{
     kModeTypeClassic,

@@ -36,28 +36,34 @@ void ExitConfirm::onEnter()
     popNode->addChild(left);
     popNode->addChild(right);
     popNode->addChild(header);
-    left->setPosition(Point(-3,0));
-    right->setPosition(Point(-3,0));
+
     m_pBody->addChild(popNode);
     popNode->setPosition(Point(DESIGN_WIDTH/2,DESIGN_HEIGHT/2));
     
-    auto cancle = Label::createWithSystemFont("结束", GAME_FONT, 25);
-    cancle->setColor(Color3B(37,142,247));
-
-    auto yes = Label::createWithSystemFont("继续玩", GAME_FONT, 25);
-    yes->setColor(Color3B(37,142,247));
+    auto tip = Label::createWithSystemFont("您确定要退出么?", GAME_FONT, 35);
+    tip->setColor(Color3B::BLACK);
+    auto headerSize = header->getContentSize();
+    tip->setPosition(Point(headerSize.width/2,headerSize.height/2));
+    header->addChild(tip);
+    
+    auto cancle = Label::createWithSystemFont("结束", GAME_FONT, 33);
+    cancle->setColor(Color3B(0,122,255));
+    
+    auto yes = Label::createWithSystemFont("继续玩", GAME_FONT, 33);
+    yes->setColor(Color3B(0,122,255));
     left->addChild(cancle);
     right->addChild(yes);
     auto size = left->getContentSize();
     cancle->setPosition(Point(size.width/2,size.height/2+7));
     yes->setPosition(cancle->getPosition());
-    
+
     popNode->setOpacity(0);
-    popNode->setScale(2.0);
+    popNode->setScale(1.5);
     
-    auto fadeIn = FadeIn::create(0.2f);
-    auto scaleAct = ScaleTo::create(0.2f, 1.0f);
-    auto spawn = Spawn::create(fadeIn,scaleAct, NULL);
+    auto fadeIn = FadeIn::create(0.3f);
+    auto easeFade = EaseBackOut::create(fadeIn);
+    auto scaleAct = ScaleTo::create(0.3f, 1.0f);
+    auto spawn = Spawn::create(easeFade,scaleAct, nullptr);
     popNode->runAction(spawn);
     
 }
