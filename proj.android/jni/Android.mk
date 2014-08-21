@@ -17,7 +17,9 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/BaseSprite.cpp \
                    ../../Classes/VisibleRect.cpp \
                    ../../Classes/GameModeIcon.cpp \
-                   ../../Classes/ExitConfirm.cpp 
+                   ../../Classes/ExitConfirm.cpp \
+                   ../../Classes/Util.cpp \
+                   ../../Classes/ShareVars.cpp 
                    
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes

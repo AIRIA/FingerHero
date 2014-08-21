@@ -14,9 +14,14 @@
 class ExitConfirm:public BaseLayer
 {
 public:
+    void initBgLayer();
+    
     virtual void onEnter();
     virtual bool init();
     CREATE_FUNC(ExitConfirm);
+protected:
+    void runFadeAction(Node *node,float duration,float alpha);
+    void hideExitWindow();
 };
 
 #endif /* defined(__FingerHero__ExitConfirm__) */

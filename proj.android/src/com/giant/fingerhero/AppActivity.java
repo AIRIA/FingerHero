@@ -24,37 +24,26 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  ****************************************************************************/
-package org.cocos2dx.cpp;
+package com.giant.fingerhero;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.view.KeyEvent;
 
+import com.giant.jni.JniBrige;
+
 public class AppActivity extends Cocos2dxActivity {
-	private AlertDialog exitDialog;
+	
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
-		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			exitDialog = new AlertDialog.Builder(this).setTitle("指尖狂人")
-					.setMessage("亲,确定要退出吗?")
-					.setPositiveButton("继续玩", new OnClickListener() {
-
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							exitDialog.dismiss();
-						}
-					}).setNegativeButton("退出", new OnClickListener() {
-
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							android.os.Process.killProcess(android.os.Process
-									.myPid());
-						}
-					}).show();
-		}
-		return super.onKeyUp(keyCode, event);
+		runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				JniBrige.getInstance().showExit();
+			}
+		});
+		
+		return super.onKeyUp(keyCode, event); 
 	}
 }

@@ -124,4 +124,10 @@
 			<locationURI>PARENT-1-PROJECT_LOC/cocos2d/cocos/2d/platform/android/java/src</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>NDK_ROOT</name>
+			<value>file:/Users/AIRIA/dev/android/android-ndk-r9d</value>
+		</variable>
+	</variableList>
 </projectDescription>
