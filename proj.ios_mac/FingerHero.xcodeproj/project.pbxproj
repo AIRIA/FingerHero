@@ -43,6 +43,10 @@
 		41A4EA8719A360120000B560 /* texture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41A4EA8319A360120000B560 /* texture.plist */; };
 		41A4EA8B19A3604E0000B560 /* HomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41A4EA8919A3604E0000B560 /* HomeScene.cpp */; };
 		41A4EA8C19A3604E0000B560 /* HomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41A4EA8919A3604E0000B560 /* HomeScene.cpp */; };
+		41F2EAA019AB476500CF40E6 /* SwapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41F2EA9E19AB476500CF40E6 /* SwapLayer.cpp */; };
+		41F2EAA119AB476500CF40E6 /* SwapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41F2EA9E19AB476500CF40E6 /* SwapLayer.cpp */; };
+		41F2EAA619AB48DE00CF40E6 /* Arrow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41F2EAA419AB48DE00CF40E6 /* Arrow.cpp */; };
+		41F2EAA719AB48DE00CF40E6 /* Arrow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41F2EAA419AB48DE00CF40E6 /* Arrow.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -258,6 +262,10 @@
 		41A4EA8319A360120000B560 /* texture.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = texture.plist; sourceTree = "<group>"; };
 		41A4EA8919A3604E0000B560 /* HomeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HomeScene.cpp; path = ../Classes/HomeScene.cpp; sourceTree = "<group>"; };
 		41A4EA8A19A3604E0000B560 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeScene.h; path = ../Classes/HomeScene.h; sourceTree = "<group>"; };
+		41F2EA9E19AB476500CF40E6 /* SwapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SwapLayer.cpp; path = ../Classes/SwapLayer.cpp; sourceTree = "<group>"; };
+		41F2EA9F19AB476500CF40E6 /* SwapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwapLayer.h; path = ../Classes/SwapLayer.h; sourceTree = "<group>"; };
+		41F2EAA419AB48DE00CF40E6 /* Arrow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Arrow.cpp; path = ../Classes/Arrow.cpp; sourceTree = "<group>"; };
+		41F2EAA519AB48DE00CF40E6 /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Arrow.h; path = ../Classes/Arrow.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -479,6 +487,10 @@
 				414E6E3D19A44A610027A55F /* GameModeIcon.h */,
 				414E6E4019A4A3ED0027A55F /* ExitConfirm.cpp */,
 				414E6E4119A4A3ED0027A55F /* ExitConfirm.h */,
+				41F2EA9E19AB476500CF40E6 /* SwapLayer.cpp */,
+				41F2EA9F19AB476500CF40E6 /* SwapLayer.h */,
+				41F2EAA419AB48DE00CF40E6 /* Arrow.cpp */,
+				41F2EAA519AB48DE00CF40E6 /* Arrow.h */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -759,10 +771,12 @@
 				4105E03419A6013B0048A10C /* ShareVars.cpp in Sources */,
 				414E6E3A19A440B80027A55F /* VisibleRect.cpp in Sources */,
 				414E6E4619A5E7B30027A55F /* Util.cpp in Sources */,
+				41F2EAA619AB48DE00CF40E6 /* Arrow.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				4105E03A19A739BB0048A10C /* ClassicScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				414E6E4219A4A3ED0027A55F /* ExitConfirm.cpp in Sources */,
+				41F2EAA019AB476500CF40E6 /* SwapLayer.cpp in Sources */,
 				41A4EA7F19A35A370000B560 /* BaseLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,7 +786,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				414E6E4719A5E7B30027A55F /* Util.cpp in Sources */,
+				41F2EAA719AB48DE00CF40E6 /* Arrow.cpp in Sources */,
 				414E6E4319A4A3ED0027A55F /* ExitConfirm.cpp in Sources */,
+				41F2EAA119AB476500CF40E6 /* SwapLayer.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				4105E03519A6013B0048A10C /* ShareVars.cpp in Sources */,
 				414E6E3519A43DCA0027A55F /* BaseSprite.cpp in Sources */,

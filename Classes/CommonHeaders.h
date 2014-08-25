@@ -24,7 +24,8 @@ using namespace cocos2d;
 
 #define GAME_FONT              "Droid Sans Fallback"
 
-enum ModeIconType{
+enum ModeIconType
+{
     kModeTypeClassic,
     kModeTypeArcade,
     kModeTypePK,
@@ -36,6 +37,14 @@ enum ModeIconType{
     kModeTypeReverse
 };
 
+enum ArrowType
+{
+    kArrowLeft,
+    kArrowRight,
+    kArrowUp,
+    kArrowDown,
+    kArrowPoint
+};
 
 
 #endif

@@ -7,3 +7,4 @@
 //
 
 #include "ClassicScene.h"
+#include "SwapLayer.h"
